@@ -12,10 +12,10 @@ dB = 2π * abs(zeeman_shift(1, 2, 5/2, -1/2) - zeeman_shift(1, 0, 1/2, -1/2))
 n̄eq = 1e4
 timescale = 1e-6
 
-C = ca40(selected_level_structure=["S-1/2", "D-1/2"])
-single_mode_chain = linearchain(
+C = Ca40(["S-1/2", "D-1/2"])
+single_mode_chain = LinearChain(
                                 ions=[C], com_frequencies=(x=νr1, y=νr2, z=νa), 
-                                selected_modes=(x=[], y=[], z=[1])
+                                vibrational_modes=(x=[], y=[], z=[1])
                             )
 
 """
